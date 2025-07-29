@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         TARGET_DIR = 'D:\\pipline-test'  // IIS deployment folder
-        APP_POOL = 'pipline-test'                          // IIS App Pool Name
-        SITE_NAME = 'pipline-test'                            // IIS Site Name (optional)
+        APP_POOL = 'pipline-test'        // IIS App Pool Name
+        SITE_NAME = 'pipline-test'       // IIS Site Name (optional)
     }
 
     stages {
@@ -27,7 +27,7 @@ pipeline {
                 echo "🚀 Deploying static files to IIS folder: ${env.TARGET_DIR}..."
                 bat """
                     if not exist "${env.TARGET_DIR}" mkdir "${env.TARGET_DIR}"
-                    xcopy /s /y /i "src\\*.*" "${env.TARGET_DIR}\\"
+                    xcopy /s /y /i "*.*" "${env.TARGET_DIR}\\"
                 """
             }
         }
