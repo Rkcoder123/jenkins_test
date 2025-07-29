@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        TARGET_DIR = 'D:\\IIS\\StaticWebsites\\myapp'   // IIS deployment folder
-        APP_POOL = 'MyAppPool'                          // IIS App Pool Name
-        SITE_NAME = 'MySite'                            // IIS Site Name (optional)
+        TARGET_DIR = 'D:\pipline-test'  // IIS deployment folder
+        APP_POOL = 'pipline-test'                          // IIS App Pool Name
+        SITE_NAME = 'pipline-test'                            // IIS Site Name (optional)
     }
 
     stages {
